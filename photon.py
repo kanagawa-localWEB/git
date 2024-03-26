@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import urllib.request as req
 
-url = "https://su-gi-rx.com/2018/03/28/text-mining-2/"
+url = "https://finance.yahoo.co.jp/"
 
 
 res = req.urlopen(url)
