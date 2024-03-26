@@ -9,6 +9,7 @@ res = req.urlopen(url)
 
 soup = BeautifulSoup(res, 'html.parser')
 
+li_list = soup.find_all("li", class_="_2ljd8LLu")
 
-span_text = soup.find("span", class_="_3u11DF4X _3Ib3sCcm").get_text()
-print("span text = ", span_text)
+for li in li_list:
+    print("li text =", li.get_text().strip())
