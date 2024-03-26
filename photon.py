@@ -12,4 +12,6 @@ soup = BeautifulSoup(res, 'html.parser')
 li_list = soup.find_all("li", class_="_2ljd8LLu")
 
 for li in li_list:
-    print("li text =", li.get_text().strip())
+    title = li.get('title')
+    if title:
+        print("title =", title.strip())
