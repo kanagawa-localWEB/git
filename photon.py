@@ -10,10 +10,5 @@ res = req.urlopen(url)
 soup = BeautifulSoup(res, 'html.parser')
 
 
-title1 = soup.find("h1").string
-print("title = ", title1)
-
-p_list = soup.find_all("p")
-
-for p in p_list:
-	print(p.get_text())
+span_text = soup.find("span", class_="_3u11DF4X _3Ib3sCcm").get_text()
+print("span text = ", span_text)
